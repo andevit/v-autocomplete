@@ -11,7 +11,7 @@ export default {
 
   callUpdateItems (text, cb) {
     clearTimeout(this.timeout)
-    if (this.isUpdateItems(text)) {
+    if (this.isUpdateItems(text) || text.length==0) {
       this.timeout = setTimeout(cb, this.wait)
     }
   },
