@@ -120,7 +120,10 @@ export default {
 
     itemView (item) {
       if (item && item.scrollIntoView) {
-        item.scrollIntoView(false)
+        item.scrollIntoView({
+          behavior: "smooth",
+          block: "nearest",
+        })
       }
     },
 
